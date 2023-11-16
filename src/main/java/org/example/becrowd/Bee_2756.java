@@ -54,7 +54,24 @@ public class Bee_2756 {
             }
         }
 
-        System.out.println();
-
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
