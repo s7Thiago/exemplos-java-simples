@@ -1,5 +1,6 @@
 package org.example.outros.objetos.bancos.models;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 public class Banco {
@@ -13,4 +14,25 @@ public class Banco {
         this.cnpj = cnpj;
         this.contas = contas;
     }
+
+    public int qtdeContas() {
+        if(contas != null) {
+            return this.contas.size();
+        }
+
+        return 0;
+    }
+
+    public double saldoTotal() {
+
+        double saldo = 0;
+
+        for(int i = 0; i < this.contas.size(); i++) {
+            saldo += contas.get(i).saldo;
+        }
+
+        return saldo;
+
+    }
+
 }

@@ -13,4 +13,33 @@ public class RedeBancos {
         this.cnpj = cnpj;
         this.bancos = bancos;
     }
+
+    public int qtdeContas() {
+        int qtde = 0;
+
+        for(int i = 0; i < this.bancos.size(); i++) {
+            qtde += bancos.get(i).qtdeContas();
+        }
+
+        return qtde;
+    }
+
+    public int qtdeContas2() {
+        int qtde = 0;
+
+        qtde = this.bancos.stream().map((banco) -> banco.qtdeContas()).reduce(qtde, Integer::sum);
+
+        return qtde;
+    }
+
+    public double saldoTotal() {
+        double saldo = 0;
+
+        for(int i = 0; i < this.bancos.size(); i++) {
+            saldo += bancos.get(i).saldoTotal();
+        }
+
+        return saldo;
+    }
+
 }
