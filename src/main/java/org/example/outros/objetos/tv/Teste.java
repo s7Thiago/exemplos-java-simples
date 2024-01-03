@@ -4,9 +4,11 @@ public class Teste {
     public static void main(String[] args) {
 
         TV minhaTelevisao = new SmartTV();
-        minhaTelevisao.ligar();
-
         TV outraTv = new TvTubo();
+
+        minhaTelevisao.ligar();
+        outraTv.ligar();
+
 
     }
 }
